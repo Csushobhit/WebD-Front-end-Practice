@@ -1,0 +1,19 @@
+/* Element Selector */
+h1 {
+    background-color: pink;
+}
+
+/* ID Selector */
+#first {
+    background-color: blue;
+}
+
+/* Class Selector */
+.group {
+    background-color: green;
+}
+
+/* Group Selector */
+h1, #second {
+    background-color: aqua;
+}

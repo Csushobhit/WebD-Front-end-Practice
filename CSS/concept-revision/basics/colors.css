@@ -1,0 +1,24 @@
+/* Named color */
+h1 {
+    background-color: aqua;
+}
+
+/* RGB */
+h2 {
+    background-color: rgb(255, 0, 0);
+}
+
+/* RGBA (transparency) */
+h3 {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+/* HEX */
+h4 {
+    background-color: #00ff00;
+}
+
+/* HSL */
+h5 {
+    background-color: hsl(200, 50%, 50%);
+}
