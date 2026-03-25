@@ -151,6 +151,4 @@ values:
 ---
 
 # PRACTICE
-
-- :contentReference[oaicite:0]{index=0}
 -flexbox froggy
