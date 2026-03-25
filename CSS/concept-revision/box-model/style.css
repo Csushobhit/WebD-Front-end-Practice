@@ -1,0 +1,131 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   BOX MODEL DEMO
+========================= */
+
+h1 {
+    background-color: orange;
+    height: 200px;
+    width: 300px;
+
+    /* Border */
+    border: 10px solid green;
+
+    /* Padding */
+    padding: 20px;
+
+    /* Margin */
+    margin: 30px;
+
+    /* Rounded corners */
+    border-radius: 20px;
+}
+
+/* =========================
+   SECOND ELEMENT
+========================= */
+
+h2 {
+    background-color: pink;
+    border: 5px solid blue;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* =========================
+   PARAGRAPH + SPAN
+========================= */
+
+p {
+    background-color: aquamarine;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Inline element */
+span {
+    color: blue;
+    font-weight: bold;
+}
+
+/* =========================
+   INLINE vs BLOCK DEMO
+========================= */
+
+.box {
+    background-color: lightcoral;
+    border: 5px solid black;
+
+    height: 100px;
+    width: 200px;
+
+    margin: 20px;
+}
+
+/* Inline behavior */
+.inline-box {
+    background-color: yellow;
+    border: 2px solid black;
+
+    padding: 10px;
+    margin: 10px;
+}
+
+/* =========================
+   DISPLAY PROPERTY
+========================= */
+
+/* Convert block → inline */
+h2 {
+    display: inline;
+}
+
+/* Convert inline → block */
+.inline-box {
+    display: block;
+}
+
+/* Hybrid */
+.box {
+    display: inline-block;
+}
+
+/* =========================
+   BORDER SIDES
+========================= */
+
+h1 {
+    border-top: 5px solid black;
+    border-right: 5px dashed red;
+    border-bottom: 5px dotted blue;
+    border-left: 5px solid green;
+}
+
+/* =========================
+   PADDING SHORTHAND
+========================= */
+
+p {
+    padding: 10px 20px 30px 40px; /* top right bottom left */
+}
+
+/* =========================
+   MARGIN SHORTHAND
+========================= */
+
+.box {
+    margin: 20px 40px; /* top-bottom, left-right */
+}
+
+/* =========================
+   BOX-SIZING
+========================= */
+
+.box {
+    box-sizing: border-box;
+}
