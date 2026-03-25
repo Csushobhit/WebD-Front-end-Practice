@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+}
+
+/* FLEX CONTAINER */
+.container {
+    display: flex; /* activates flex */
+    height: 400px;
+    background-color: aqua;
+
+    /* try changing below one by one */
+
+    /* flex-direction */
+    flex-direction: row; /* row | column | row-reverse | column-reverse */
+
+    /* main axis */
+    justify-content: space-evenly; /* start | end | center | space-between | space-around | space-evenly */
+
+    /* cross axis */
+    align-items: center; /* start | end | center */
+
+    /* wrapping */
+    flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
+
+    /* spacing */
+    gap: 10px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    border: 2px solid black;
+}

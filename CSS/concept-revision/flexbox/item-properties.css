@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    height: 300px;
+    background-color: lightgray;
+}
+
+/* default box */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    margin: 5px;
+    color: white;
+}
+
+/* FLEX GROW */
+.first {
+    flex-grow: 1;
+}
+
+.second {
+    flex-grow: 2;
+}
+
+/* FLEX SHRINK */
+.third {
+    flex-shrink: 3;
+}
+
+/* FLEX BASIS */
+.first {
+    flex-basis: 150px;
+}
+
+/* ALIGN SELF */
+.second {
+    align-self: flex-end;
+}

@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* RELATIVE */
+.relative-box {
+    position: relative;
+    top: 20px;
+    left: 50px;
+    background-color: lightblue;
+}
+
+/* FIXED */
+.fixed-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: pink;
+}
+
+/* STICKY */
+.sticky-box {
+    position: sticky;
+    top: 0;
+    background-color: orange;
+}
+
+/* CONTAINER (important for absolute) */
+.container {
+    height: 500px;
+    background-color: lightgray;
+    position: relative;
+}
+
+/* ABSOLUTE */
+.absolute-box {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: red;
+    color: white;
+}

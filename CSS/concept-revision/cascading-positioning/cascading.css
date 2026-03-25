@@ -1,0 +1,19 @@
+/* External CSS */
+h1 {
+    background-color: aqua;
+}
+
+/* Class selector */
+.cls {
+    background-color: green;
+}
+
+/* ID selector */
+#heading {
+    background-color: purple;
+}
+
+/* !important demo */
+h2 {
+    background-color: yellow !important;
+}

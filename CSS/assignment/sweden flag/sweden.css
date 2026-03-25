@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+/* Flag */
+.flag {
+    width: 400px;
+    height: 250px;
+    background-color: blue;
+    position: absolute;
+    border: 5px solid black;
+}
+
+/* Horizontal stripe */
+.horizontal {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 40px;
+    background-color: yellow;
+    transform: translateY(-50%);
+}
+
+/* Vertical stripe */
+.vertical {
+    position: absolute;
+    left: 30%;
+    height: 100%;
+    width: 40px;
+    background-color: yellow;
+}
