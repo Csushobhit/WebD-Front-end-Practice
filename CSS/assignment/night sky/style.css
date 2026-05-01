@@ -1,0 +1,132 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY BACKGROUND (premium night sky) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+    /* blended realistic + cold space tone */
+    background: radial-gradient(
+    ellipse at bottom,
+    #061427 0%,   /* deep navy blue */
+    #020611 45%,  /* very dark blue */
+    #000000 100%  /* pure black */
+);
+}
+
+/* SUBTLE SKY GLOW */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at 50% 85%,
+        rgba(20, 60, 160, 0.10),  /* cooler blue */
+        transparent 60%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* VIGNETTE (premium polish) */
+body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle,
+        transparent 55%,
+        rgba(0, 0, 0, 0.65)
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* PARTICLE CONTAINER */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* keep above glow + vignette */
+    z-index: 2;
+}
+
+/* STARS (unchanged brightness as requested) */
+.star {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+    animation: twinkle 3s ease-in-out infinite, drift 15s linear infinite;
+}
+
+/* STAR ANIMATIONS */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -30px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* METEOR */
+.meteor {
+    position: absolute;
+    width: 4px;
+    height: 140px;
+    background: linear-gradient(
+        rgba(255,255,255,1),
+        rgba(255,255,255,0.5),
+        transparent
+    );
+    opacity: 0;
+    transform: rotate(45deg);
+    pointer-events: none;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+/* METEOR ANIMATION */
+@keyframes meteorFall {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(45deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-800px, 800px) rotate(45deg);
+    }
+}
