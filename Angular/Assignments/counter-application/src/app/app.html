@@ -1,0 +1,53 @@
+<div class="container">
+
+  <div class="counter-card">
+
+    <h1>Counter Application</h1>
+
+    <h2
+      [style.color]="count > 0 ? 'green' : count < 0 ? 'red' : 'black'">
+
+      {{ count }}
+
+    </h2>
+
+    @if(count > 0) {
+      <p class="status positive">Positive Number</p>
+    }
+
+    @else if(count < 0) {
+      <p class="status negative">Negative Number</p>
+    }
+
+    @else {
+      <p class="status neutral">Counter is Zero</p>
+    }
+
+    <div class="button-group">
+
+      <button class="increment-btn"
+        (click)="increment()">
+
+        Increment
+
+      </button>
+
+      <button class="decrement-btn"
+        (click)="decrement()">
+
+        Decrement
+
+      </button>
+
+      <button class="reset-btn"
+        (click)="reset()">
+
+        Reset
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
