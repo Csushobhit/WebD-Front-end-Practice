@@ -2,3 +2,167 @@
 <app-login></app-login>
 <app-profile></app-profile>
 <button (click) ="Hello()" >Click Me</button>
+
+
+<input type="text" placeholder="Enter User Name" (input) = "getName($event)" [value] ="name">
+<br><br>
+<button (click)=" showName()">Get Value</button>
+<button (click)=" setName()">Set Value</button>
+<h2>User name is :{{name}}</h2>
+<h2>User Name Is: {{ displayName }}</h2>
+
+
+<input type="text" placeholder="Enter Email" #emailField>
+<button (click) = "getEmail(emailField.value)"> Get Email</button>
+<h2>Email is: {{email}}</h2>
+
+
+<button (click)="hide()">Hide Div</button>
+<br>
+<button (click)="show()">Show Div</button>
+@if(display)
+{
+    
+<div style="width: 200px; height: 200px; background-color: green;">
+
+</div>
+
+}
+
+
+<hr>
+
+<button (click)="color = 1">Red</button>
+
+<button (click)="color = 2">Green</button>
+
+<button (click)="color = 3">Yellow</button>
+
+<button (click)="color = 4">Black</button>
+
+
+@if(color === 1) {
+
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    ">
+  </div>
+
+}
+
+@else if(color === 2) {
+
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      background-color: green;
+    ">
+  </div>
+
+}
+
+@else if(color === 3) {
+
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    ">
+  </div>
+
+}
+
+@else if(color === 4) {
+
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      background-color: black;
+    ">
+  </div>
+
+}
+
+@else {
+
+  <div
+    style="
+      width: 200px;
+      height: 200px;
+      background-color: turquoise;
+    ">
+  </div>
+
+}
+
+
+@switch(color1) {
+
+  @case('red') {
+
+    <h1
+      style="
+        background-color: red;
+        color: white;
+      ">
+      Red Color
+    </h1>
+
+  }
+
+  @case('green') {
+
+  <h1
+    style="
+      background-color: green;
+      color: white;
+    ">
+      Green Color
+    </h1>
+
+}
+
+@case('yellow') {
+
+  <h1
+    style="
+      background-color: yellow;
+      color: black;
+    ">
+      Yellow Color
+    </h1>
+
+}
+
+@case('blue') {
+
+  <h1
+    style="
+      background-color: blue;
+      color: white;
+    ">
+      Blue Color
+    </h1>
+
+}
+
+}
+
+<button (click)="handleColor('red')">Red</button>
+
+<button (click)="handleColor('green')">Green</button>
+
+<button (click)="handleColor('yellow')">Yellow</button>
+
+<button (click)="handleColor('blue')">Blue</button>
+
+@for(user of users; track user)
+{
+    <h2>{{user}}</h2>
+}

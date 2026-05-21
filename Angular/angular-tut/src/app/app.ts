@@ -22,4 +22,45 @@ export class App {
   {
     alert("Other fxn Called");
   }
+
+  name = '';
+  displayName = '';
+  getName(event: Event)
+  {
+    const name = (event.target as HTMLInputElement).value;
+    this.name = name;
+  }
+  showName()
+  {
+    this.displayName = this.name;
+  }
+  setName()
+  {
+    this.name = 'Sam';
+  }
+
+  email = '';
+
+  getEmail(val: string)
+  {
+    alert(val);
+    this.email = val;
+  }
+
+  display = true;
+
+  hide() {
+  this.display = false;
+  }
+  show() {
+  this.display = true;
+  }
+  color = 0;
+  color1 = '';
+  handleColor(val: string) {
+  this.color1 = val;
+}
+
+users = ['Anil', 'Sam', 'Peter', 'Bruce'];
+
 }

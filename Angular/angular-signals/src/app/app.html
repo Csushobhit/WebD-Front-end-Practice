@@ -1,0 +1,49 @@
+<h1>Signals Learning</h1>
+
+{{x}}
+
+<h1>{{ count() }}</h1>
+
+<button (click)="updateValue()">
+  Update Value
+</button>
+
+<button (click)="increaseValue()">
+  Increment
+</button>
+
+<button (click)="updateX()">
+  Update X
+</button>
+
+<h1>X Value: {{ x() }}</h1>
+
+<h1>Y Value: {{ y() }}</h1>
+
+<h1>Z Value: {{ z() }}</h1>
+
+<input
+  type="text"
+  placeholder="Enter First Name"
+  #fname
+>
+
+<br><br>
+
+<input
+  type="text"
+  placeholder="Enter Last Name"
+  #lname
+>
+
+<br><br>
+
+<button (click)="updatename(fname.value, lname.value)">
+  Update Full Name
+</button>
+
+<h1>X Value: {{ firstname() }}</h1>
+
+<h1>Y Value: {{ lastname() }}</h1>
+
+<h1>Z Value: {{ fullname() }}</h1>
