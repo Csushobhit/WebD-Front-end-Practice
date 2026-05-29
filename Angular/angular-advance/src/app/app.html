@@ -1,0 +1,42 @@
+<h1>Angular Advance Learning</h1>
+
+<h1>Effect Learning</h1>
+
+<h2>{{ name() }}</h2>
+
+<button (click)="updateName()">
+  Change Name
+</button>
+
+<h1>Two Way Binding</h1>
+
+<input
+type="text"
+placeholder="Enter Name"
+[(ngModel)]="username">
+
+<br><br>
+
+<button
+(click)="setName()">
+
+Set Name
+
+</button>
+
+<h2>
+User Name:
+{{username | uppercase}}
+</h2>
+
+<app-user
+[name]="userName"
+[age]="userAge">
+</app-user>
+
+
+<app-user
+[name]="userName"
+[age]="userAge"
+(changeNameEvent)="handleNameChange($event)">
+</app-user>

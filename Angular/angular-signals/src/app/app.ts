@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal,effect } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {computed} from '@angular/core';
 
